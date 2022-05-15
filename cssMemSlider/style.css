@@ -104,3 +104,42 @@ p {
     transform: scale(1);
     z-index: 1;
 }
+
+@media (max-width: 767px) {
+    .wrapper {
+        max-width: 30em;
+        height: 18em;
+    }
+
+    .wrapper-btn {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 475px) {
+    p {
+        margin-top: 54%;
+    }
+}
+
+@media (max-width: 452px) {
+    .wrapper {
+        max-width: 22em;
+    }
+
+    p {
+        margin-top: 70%;
+    }
+}
+
+@media (max-width: 360px) {
+    p {
+        margin-top: 78%;
+    }
+}
+
+@media (max-width: 330px) {
+    p {
+        margin-top: 80%;
+    }
+}
