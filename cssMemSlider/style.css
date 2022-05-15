@@ -1,0 +1,106 @@
+@import './reset.css';
+
+body {
+    background-color: #3e5d7c;
+}
+
+.container {
+    max-width: 44em;
+    height: 24em;
+    margin: 8vw auto 0;
+    padding: 1em;
+    background: black;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    position: relative;
+}
+
+input {
+    display: none;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    opacity: 0;
+    transform: scale(1.2);
+    transition: transform .3s;
+    z-index: 0;
+}
+
+p {
+    color: white;
+    margin-top: 52%;
+}
+
+.slide-1 {
+    background-image: url("./assets/image1.jpg");
+    background-size: 100% 100%;
+}
+
+.slide-2 {
+    background-image: url("./assets/image2.jpg");
+    background-size: 100% 100%;
+}
+
+.slide-3 {
+    background-image: url("./assets/image3.jpg");
+    background-size: 100% 100%;
+}
+
+.slide-4 {
+    background-image: url("./assets/image4.jpg");
+    background-size: 100% 100%;
+}
+
+.wrapper-btn {
+    display: flex;
+    justify-content: end;
+    margin-top: 8vh;
+    gap: 5%;
+}
+
+.wrapper-btn label {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    cursor: pointer;
+    background-color: lightblue;
+    position: relative;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+#slideOne:checked ~ .wrapper-btn label:nth-child(1),
+#slideTwo:checked ~ .wrapper-btn label:nth-child(2),
+#slideThree:checked ~ .wrapper-btn label:nth-child(3),
+#slideFour:checked ~ .wrapper-btn label:nth-child(4) {
+    background-color: blanchedalmond;
+}
+
+.wrapper-btn label:hover {
+    background-color: grey;
+}
+
+.wrapper-btn label:active {
+    background-color: darkgray;
+}
+
+#slideOne:checked ~ .slider-wrapper .slide-1,
+#slideTwo:checked ~ .slider-wrapper .slide-2,
+#slideThree:checked ~ .slider-wrapper .slide-3,
+#slideFour:checked ~ .slider-wrapper .slide-4 {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 1;
+}
