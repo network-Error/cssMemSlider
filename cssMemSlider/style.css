@@ -106,7 +106,7 @@ p {
 }
 
 @media (max-width: 767px) {
-    .wrapper {
+    .container {
         max-width: 30em;
         height: 18em;
     }
@@ -123,7 +123,7 @@ p {
 }
 
 @media (max-width: 452px) {
-    .wrapper {
+    .container {
         max-width: 22em;
     }
 
